@@ -1,0 +1,282 @@
+longtaideMacBook-Pro:~ Emma$ cd ~/Desktop/cs61a/lab/lab01
+longtaideMacBook-Pro:lab01 Emma$ ls
+__pycache__		lab01.py		tests
+guessing_game_graph.py	lab01_extra.py
+lab01.ok		ok
+longtaideMacBook-Pro:lab01 Emma$ cd ~/Desktop/cs61a/lab/lab01
+longtaideMacBook-Pro:lab01 Emma$ python3 ok -q control -u
+=====================================================================
+Assignment: Lab 1
+OK, version v1.13.11
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unlocking tests
+
+At each "? ", type what you would expect the output to be.
+Type exit() to quit
+
+---------------------------------------------------------------------
+Control > Suite 1 > Case 1
+(cases remaining: 5)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> def xk(c, d):
+...     if c == 4:
+...         return 6
+...     elif d >= 4:
+...         return 6 + 7 + c
+...     else:
+...         return 25
+>>> xk(10, 10)
+? 23
+-- OK! --
+
+>>> xk(10, 6)
+? 23
+-- OK! --
+
+>>> xk(4, 6)
+? 6
+-- OK! --
+
+>>> xk(0, 0)
+? 25
+-- OK! --
+
+---------------------------------------------------------------------
+Control > Suite 1 > Case 2
+(cases remaining: 4)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> def how_big(x):
+...     if x > 10:
+...         print('huge')
+...     elif x > 5:
+...         return 'big'
+...     elif x > 0:
+...         print('small')
+...     else:
+...         print("nothin'")
+>>> how_big(7)
+? 'big'
+-- OK! --
+
+>>> how_big(12)
+? huge
+-- OK! --
+
+>>> how_big(1)
+? "nothin'"
+-- Not quite. Try again! --
+
+? small
+-- OK! --
+
+>>> how_big(-1)
+? "nothin'"
+-- Not quite. Try again! --
+
+? nothin'
+-- OK! --
+
+---------------------------------------------------------------------
+Control > Suite 2 > Case 1
+(cases remaining: 3)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> n = 3
+>>> while n >= 0:  # If this loops forever, just type Infinite Loop
+...     n -= 1
+...     print(n)
+(line 1)? 2
+(line 2)? 1
+(line 3)? 0
+(line 4)? 
+-- Not quite. Try again! --
+
+(line 1)? 2
+(line 2)? 1
+(line 3)? 0
+(line 4)? -1
+-- OK! --
+
+---------------------------------------------------------------------
+Control > Suite 2 > Case 2
+(cases remaining: 2)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> positive = 28
+>>> while positive: # If this loops forever, just type Infinite Loop
+...    print("positive?")
+...    positive -= 3
+? positive
+-- Not quite. Try again! --
+
+? Infinite Loop
+-- OK! --
+
+---------------------------------------------------------------------
+Control > Suite 2 > Case 3
+(cases remaining: 1)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> positive = -9
+>>> negative = -12
+>>> while negative: # If this loops forever, just type Infinite Loop
+...    if positive:
+...        print(negative)
+...    positive += 3
+...    negative += 3
+(line 1)? -12
+(line 2)? Infinite Loop
+-- Not quite. Try again! --
+
+(line 1)? -12
+(line 2)? -9
+(line 3)? -6
+-- OK! --
+
+---------------------------------------------------------------------
+OK! All cases for Control unlocked.
+
+Backup... 100% complete
+Backup successful for user: zhe_zhao@berkeley.edu
+
+Checking for software updates...
+OK is up to date
+longtaideMacBook-Pro:lab01 Emma$ python3 ok -q short_circuiting -u
+=====================================================================
+Assignment: Lab 1
+OK, version v1.13.11
+=====================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unlocking tests
+
+At each "? ", type what you would expect the output to be.
+Type exit() to quit
+
+---------------------------------------------------------------------
+Veritasiness > Suite 1 > Case 1
+(cases remaining: 3)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> True and 13
+? True
+-- Not quite. Try again! --
+
+? False
+-- Not quite. Try again! --
+
+? 13
+-- OK! --
+
+>>> False or 0
+? False
+-- Not quite. Try again! --
+
+? 0
+-- OK! --
+
+>>> not 10
+? False
+-- OK! --
+
+>>> not None
+? True
+-- OK! --
+
+---------------------------------------------------------------------
+Veritasiness > Suite 1 > Case 2
+(cases remaining: 2)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> True and 1 / 0 and False  # If this errors, just type Error.
+? Error
+-- OK! --
+
+>>> True or 1 / 0 or False  # If this errors, just type Error.
+? True
+-- OK! --
+
+>>> True and 0  # If this errors, just type Error.
+? 0
+-- OK! --
+
+>>> False or 1  # If this errors, just type Error.
+? 1
+-- OK! --
+
+>>> 1 and 3 and 6 and 10 and 15  # If this errors, just type Error.
+? 15
+-- OK! --
+
+>>> 0 or False or 2 or 1 / 0  # If this errors, just type Error.
+? 2
+-- OK! --
+
+---------------------------------------------------------------------
+Veritasiness > Suite 2 > Case 1
+(cases remaining: 1)
+
+What would Python display? If you get stuck, try it out in the Python
+interpreter!
+
+>>> not 0
+? True
+-- OK! --
+
+>>> (1 + 1) and 1  # If this errors, just type Error. If this is blank, just type Nothing.
+? Nothing
+-- Not quite. Try again! --
+
+? Error
+-- Not quite. Try again! --
+
+? 2
+-- Not quite. Try again! --
+
+? (1 + 1)
+-- Not quite. Try again! --
+
+? 1
+-- OK! --
+
+>>> 1/0 or True  # If this errors, just type Error. If this is blank, just type Nothing.
+? True
+-- Not quite. Try again! --
+
+? Nothing
+-- Not quite. Try again! --
+
+? Error
+-- OK! --
+
+>>> (True or False) and False  # If this errors, just type Error. If this is blank, just type Nothing.
+? False
+-- OK! --
+
+---------------------------------------------------------------------
+OK! All cases for Veritasiness unlocked.
+
+Backup... 100% complete
+Backup successful for user: zhe_zhao@berkeley.edu
+
+Checking for software updates...
+OK is up to date
+longtaideMacBook-Pro:lab01 Emma$ 
